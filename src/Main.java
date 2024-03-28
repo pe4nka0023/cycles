@@ -1,66 +1,80 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         //task 1
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
-
+        double sum = 0;
+        int mouth = 1;
+        while (sum < 2459000) {
+            sum += 15000;
+            System.out.println("Месяц " + mouth + ", сумма накоплений равна " + sum + " рублей");
+            mouth++;
         }
         //task 2
-        for (int i = 10; i >= 0; i--) {
-            System.out.println(i);
-
+        int n = 0;
+        while (n < 10) {
+            n++;
+            System.out.print(n + " ");
         }
+        System.out.println();
+        for (; n >= 1; n--) {
+            System.out.print(n + " ");
+        }
+
 
         //task 3
-        for (int i = 0; i < 17; i = i + 2) {
-            System.out.println(i);
-
-        }
-
-        //task 4
-        for (int i = 10; i >= -10; i--) {
-            System.out.println(i);
-
-        }
-
-        //task 5
-        for (int i = 1904; i <= 2096; i = i + 4) {
-            System.out.println(i + "год является високосным");
-
-        }
-
-        //task 6
-        for (int i = 7; i <= 98; i = i + 7) {
-            System.out.print(i + " ");
-
-        }
-        System.out.println();
-
-        //task 7
-        for (int i = 1; i <= 512; i = i * 2) {
-            System.out.print(i + " ");
-
-        }
-        System.out.println();
-
-        //task 8
-        for (int month = 1, sum = 0; month <= 12; month++, sum = sum + 29000) {
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
-
-
+        double population = 12000000;
+        int birthRate = 17;
+        int deathRate = 8;
+        for (int year = 1; year <= 10; year++) {
+            double birth = population / 1800 + birthRate;
+            double death = population / 1800 + deathRate;
+            population = population + birth - death;
+            System.out.println("Год " + year + " , численность населения составляет " + (long) population);
             }
 
-        //task 9
-        int sum = 0;
-        for (int month = 1; month <= 12; month++) {
-            sum = (int) (sum * 1.01);
-            sum = sum + 29000;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + (long) sum + " рублей");
+        //task 4
+        sum = 15000;
+        mouth = 1;
+        while (sum < 12000000) {
+            sum = sum + sum * 7 / 100;
+            mouth++;
+            System.out.println("месяц = " + mouth + " сумма = " + (int) sum);
+            }
+
+        //task 5
+        sum = 15000;
+        mouth = 1;
+        while (sum < 12000000) {
+            sum = sum + sum * 7 / 100;
+            mouth++;
+            if (mouth % 6 == 0) {
+                System.out.println("месяц = " + mouth + " сумма = " + (int) sum);
+                }
+            }
+        //task 6
+        sum = 15000;
+        mouth = 1;
+        while (mouth < 9 * 12) {
+            sum = sum + sum * 7 / 100;
+            mouth++;
+            if (mouth % 6 == 0) {
+                System.out.println("месяц = " + mouth + " сумма = " + (int) sum);
+                }
+            }
+        //task 7
+        int friday = 3;
+        while (friday <= 31) {
+            System.out.println("Сегодня пятница, " + friday +"-е число. Необходимо подготовить отчет");
+            friday += 7;
         }
 
-        //task 10
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("2*" + i + "=" + (2*i));
+        //task 8
+        int currentYear = LocalDate.now().getYear();
+        for (int year = currentYear - 200; year < currentYear + 100; year++) {
+            if (year % 79 == 0) {
+                System.out.println(year);
+            }
+        }
         }
     }
-}
