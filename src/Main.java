@@ -28,7 +28,7 @@ public class Main {
         int deathRate = 8;
         for (int year = 1; year <= 10; year++) {
             double birth = population / 1800 * birthRate;
-            double death = population / 1800 + deathRate;
+            double death = population / 1800 * deathRate;
             population = population + birth - death;
             System.out.println("Год " + year + " , численность населения составляет " + (long) population);
             }
