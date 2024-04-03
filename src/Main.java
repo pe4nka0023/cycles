@@ -2,6 +2,8 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+
+
         //task 1
         int os = 0;
         if (os == 0) {
