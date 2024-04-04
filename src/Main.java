@@ -19,11 +19,11 @@ public class Main {
             if (year < 2015) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             } else {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
         } else if (os == 1) {
             if (year < 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             }
@@ -44,7 +44,7 @@ public class Main {
             days = 1;
         } else if (distance < 60) {
             days = 2;
-        } else if (days < 100) {
+        } else if (distance < 100) {
             days = 3;
         } else {
             days = -1;
@@ -71,6 +71,7 @@ public class Main {
             case 7:
             case 8:
                 System.out.println("лето");
+                break;
             case 9:
             case 10:
             case 11:
