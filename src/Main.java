@@ -1,66 +1,85 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
-        //task 1
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
 
+
+        //task 1
+        int os = 0;
+        if (os == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (os == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Ваша  OS не поддерживается");
         }
         //task 2
-        for (int i = 10; i >= 0; i--) {
-            System.out.println(i);
-
-        }
-
-        //task 3
-        for (int i = 0; i < 17; i = i + 2) {
-            System.out.println(i);
-
-        }
-
-        //task 4
-        for (int i = 10; i >= -10; i--) {
-            System.out.println(i);
-
-        }
-
-        //task 5
-        for (int i = 1904; i <= 2096; i = i + 4) {
-            System.out.println(i + "год является високосным");
-
-        }
-
-        //task 6
-        for (int i = 7; i <= 98; i = i + 7) {
-            System.out.print(i + " ");
-
-        }
-        System.out.println();
-
-        //task 7
-        for (int i = 1; i <= 512; i = i * 2) {
-            System.out.print(i + " ");
-
-        }
-        System.out.println();
-
-        //task 8
-        for (int month = 1, sum = 0; month <= 12; month++, sum = sum + 29000) {
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
-
-
+        int year = 2013;
+        if (os == 0) {
+            if (year < 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
             }
-
-        //task 9
-        int sum = 0;
-        for (int month = 1; month <= 12; month++) {
-            sum = (int) (sum * 1.01);
-            sum = sum + 29000;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + (long) sum + " рублей");
+        } else if (os == 1) {
+            if (year < 2015) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+        } else {
+            System.out.println("Ваш OS не поддерживается");
+        }
+        //task 3
+        year = 2021;
+        if (year >= 1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
+        } else {
+            System.out.println( year + " год не является високосным");
+        }
+        //task 4
+        int days = 0;
+        int distance = 47;
+        if (distance < 20) {
+            days = 1;
+        } else if (distance < 60) {
+            days = 2;
+        } else if (distance < 100) {
+            days = 3;
+        } else {
+            days = -1;
+        }
+        if (days >= 0) {
+            System.out.println("Потребуется дней: " + days + " дня");
+        } else {
+            System.out.println("Доставки нет");
+        }
+        //task 5
+        int monthNumber = 11;
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("осень");
+                break;
+            default:
+                System.out.println("такого месяца нет");
         }
 
-        //task 10
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("2*" + i + "=" + (2*i));
-        }
     }
 }
