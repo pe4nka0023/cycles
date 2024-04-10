@@ -2,74 +2,36 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+        double[] payments = {35000, 150000, 20000, 37000, 74000};
         //task 1
-        int[] nums = new int[3];
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = i + 1;
+        double sum = 0;
+        for (double payment : payments) {
+            sum += payment;
         }
-        double[] doubles = {1.57, 7.654, 9.986};
-        boolean[] bools = {false, false, true};
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
         //task 2
-        for (int i = 0; i < nums.length; i++) {
-            System.out.print(nums[i]);
-            if (i < nums.length - 1) {
-                System.out.print(", ");
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
+        for (double payment : payments) {
+            if (payment < min) {
+                min = payment;
+            }
+            if (max < payment) {
+                max = payment;
             }
         }
-        System.out.println();
-        for (int i = 0; i < doubles.length; i++) {
-            System.out.print(doubles[i]);
-            if (i < doubles.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i = 0; i < bools.length; i++) {
-            System.out.print(bools[i]);
-            if (i < bools.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        System.out.println();
+        System.out.println("Минимальная сумма трат за неделю составила " + min + " рублей." +
+                "Максимальная сумма трат за неделю составила " + max + " рублей");
 
         //task 3
-        for (int i = nums.length - 1; i >= 0; i--) {
-            System.out.print(nums[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i = doubles.length - 1; i >= 0; i--) {
-            System.out.print(doubles[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println();
-        for (int i = bools.length - 1; i >= 0; i--) {
-            System.out.print(bools[i]);
-            if (i > 0) {
-                System.out.print(", ");
-            }
-        }
+        double average = sum / payments.length;
+        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
 
         //task 4
-        System.out.println();
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 != 0) {
-                nums[i]++;
-
-            }
-
-        }
-        for (int i = 0; i < nums.length; i++) {
-            System.out.print(nums[i]);
-            if (i < nums.length - 1) {
-                System.out.print(", ");
-            }
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
 
         }
         }
