@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) {
         //task 1
         var firstName = "Ivan";
-        var middleName = "Ivanov";
-        var lastName = "Ivanovich";
+        var lastName = "Ivanov";
+        var middleName = "Ivanovich";
         var fullName = middleName + " " + firstName + " " + lastName;
         System.out.println("Ф. И. О. сотрудника — " + fullName);
 
